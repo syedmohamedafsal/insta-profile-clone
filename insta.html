@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <style>
+            body{
+                background: #ffff;
+            }
+            .header{
+                border: 3px solid #d1d1d1;
+                height: 170vh;
+                margin: 0;
+                padding: 0;
+                position: absolute;
+                left: 400px;
+            }
+            .left{
+                font-size:3rem;
+                margin: 20px;
+            }
+            .name{
+                font-size: 20px;
+                position: absolute;
+                top: 16px;
+                font-weight: bold;
+            }
+            .down{
+                font-size: 100px;
+            }
+            .arrow{
+                border:solid black;
+                border-width: 0 3px 3px 0;
+                display: inline-block;
+                padding: 3px;
+                position: absolute;
+                left: 270px;
+                top: 7px;
+                transform: rotate(45deg);
+            }
+            .navbar{
+                height: 2px;
+                width: 30px;
+                background: #000;
+                margin: 6px 0;
+                position: relative;
+                left: 560px;
+                top: -40px;
+            }
+            .top{
+                display: inline-block;
+                list-style: none;
+                text-transform: capitalize;
+                font-size: 20px;
+            }
+            ul li{
+                display: inline-block;
+                margin: 15px;
+                position: relative;
+                left: -10px;
+                top: 40px;
+            }
+            .no{
+                margin: 30px;
+            }
+            h3{
+                display: inline-block;
+                margin: 35px;
+                position: relative;
+                top: -10px;
+                left:310px ;
+            }
+            .proflie{
+                width: 100px;
+                height:100px;
+                clip-path: circle(50% at 50% 50%);
+                position: absolute;
+                left: 80px;
+            }
+            .story{
+                text-align: center;
+                position: relative;
+                left: 160px;
+                top: -45px;
+                content: '';
+                font-size: 25px;
+                height: 25px;
+                width: 25px;
+                background-color:blue;
+                color: #fff;
+                border: 2px solid #fff;
+                border-radius: 300px;
+            }
+            .sma{
+                font-size:25px;
+                text-transform: capitalize;
+                position: relative;
+                left: 20px;
+                top: -45px;
+            }
+            .mukku{
+                font-size:20px;
+                text-transform: capitalize;
+                position: relative;
+                left: 20px;
+                top: -45px;
+            }
+            .bio{
+                font-size:18px;
+                text-transform: capitalize;
+                position: relative;
+                left: 20px;
+                top: -50px;
+                font-family:cursive;
+            }
+            .tn{
+                font-size:18px;
+                text-transform: capitalize;
+                position: relative;
+                left: 20px;
+                top: -60px;
+                font-family:fantasy;
+            }
+        a{
+            font-size:17px;
+            position: relative;
+            top: -60px;
+            left: 20px;
+            text-decoration: none;
+            opacity: 0.8;
+        }
+        .edit{
+            text-transform: capitalize;
+            padding: 0px 260px;
+            position: relative;
+            left: -60px;
+            top: -20px;
+            font-size: 19px;
+            background-color: #fff;
+            border:solid gray;
+            border-radius: 8px;
+            opacity: 0.8;
+        }
+        .add{
+            content: '';
+            position: relative;
+            left: 420px;
+            top: 460px;
+            height: 70px;
+            width: 70px;
+            border: solid gray;
+            text-align: center;
+            font-size: 60px;
+            border-radius: 50px;
+        }
+        .new{
+            font-size: 25px;
+            text-transform: capitalize;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            position: relative;
+            left: 430px;
+            top: 375px;
+        }
+        .story-1{
+            width: 75px;
+            height: 75px;
+            clip-path: circle(50% at 50% 50%);
+            position: relative;
+            left: 480px;
+            top: 340px;
+            clip-rule: evenodd;
+        }
+        .space{
+            font-size: 25px;
+            text-transform: capitalize;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            position: relative;
+            left: 90px;
+            top: 375px;
+
+        }
+        .story-2{
+            width: 75px;
+            height: 75px;
+            clip-path: circle(50% at 50% 50%);
+            position:relative;
+            left: 510px;
+            top: 340px;
+            clip-rule: evenodd;
+        }
+        .moon{
+            font-size: 25px;
+            text-transform: capitalize;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            position: relative;
+            left: 130px;
+            top: 375px;
+        }
+        .story-3{
+            width: 75px;
+            height: 75px;
+            clip-path: circle(50% at 50% 50%);
+            position:relative;
+            left: 530px;
+            top: 340px;
+            clip-rule: evenodd;
+        }
+        .city{
+            font-size: 25px;
+            text-transform: capitalize;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            position: relative;
+            left: 150px;
+            top: 375px;
+        }
+        .story-4{   
+            width: 75px;
+            height: 75px;
+            clip-path: circle(50% at 50% 50%);
+            position:relative;
+            left: 550px;
+            top: 340px;
+            clip-rule: evenodd;
+        }
+        .os{
+            font-size: 25px;
+            text-transform: capitalize;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            position: relative;
+            left: 175px;
+            top: 375px;
+        }
+        .story-5{   
+            width: 75px;
+            height: 75px;
+            clip-path: circle(50% at 50% 50%);
+            position:relative;
+            left: 570px;
+            top: 340px;
+            clip-rule: evenodd;
+        }
+        .baby{
+            font-size: 25px;
+            text-transform: capitalize;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            position: relative;
+            left: 200px;
+            top: 375px;
+        }
+        .line{
+            content: '';
+            height: 1px;
+            width: 640px;
+            position: relative;
+            left: 400px;
+            top: 430px;
+            background-color: gray;
+        }
+        .fa-th{
+            font-size: 30px;
+            position: relative;
+            top: 450px;
+            left: 570px;
+        }
+        .line-2{
+            content: '';
+            height: 3px;
+            width: 300px;
+            position: relative;
+            left: 410px;
+            top: 460px;
+            background-color: #000;
+        }
+        .fa-id-badge{
+            font-size: 30px;
+            position: relative;
+            top: 420px;
+            left: 850px;
+        }
+        .footer{
+            display: grid;
+            grid-template-columns:210px 210px 20px;
+            padding: 10px 5px;
+            margin: 0px;
+            position:absolute;
+            left: 400px;
+            top: 780px;
+            background-color:#fff;
+        }
+        </style>
+    </head>
+    <body>
+      <div class="header">
+        <span class="left">+</span>
+        <label class="name">just_a_pshyo_coder</label>
+        <p class="arrow"><i class="down"></i></p>
+        <div class="navbar"></div>
+        <div class="navbar"></div>
+        <div class="navbar"></div>
+        <h3>8</h3>
+        <h3>338</h3>    
+        <h3>763</h3>
+        <ul class="top">
+            <li>post</li>
+            <li>followers</li>
+            <li>following</li>
+        </ul>
+       <img src="./parrot os.jpg" alt="proflie" class="proflie"> 
+       <h2 class="story">+</h2>
+        <h1 class="sma">syed mohamed afsal</h1>
+        <h2 class="mukku">crime bikerz 03</h2>
+        <p class="bio">the way of propet is the way<br>to heaven</p>
+        <span class="tn">tn 76...</span>
+        <a href="">more</a>
+        <button class="edit">edit proflie</button>
+    </div>
+    <div class="middle">
+        <h1 class="add">+</h1>
+        <span class="new">new</span>
+        <img src="C:\Users\S.H.E.I.L.D\Desktop\New folder\web devloping\space.jpg" alt="story-1" class="story-1">
+        <img src="C:\Users\S.H.E.I.L.D\Desktop\New folder\web devloping\wallpaperflare.com_wallpaper (3).jpg" alt="story-2" class="story-2">
+        <img src="C:\Users\S.H.E.I.L.D\Desktop\New folder\web devloping\wallpaperflare.com_wallpaper.jpg" alt="story-3" class="story-3">
+        <img src="C:\Users\S.H.E.I.L.D\Desktop\New folder\web devloping\parrot os.jpg" alt="story-4" class="story-4 ">
+        <img src="./my-1.jfif" alt="my" class="story-5">
+        <span class="space">space</span>
+        <span class="moon">night..</span>
+        <span class="city">city</span>      
+        <span class="os">parrot..</span>
+         <span class="baby">baby</span>
+        <div class="line"></div>
+        <i class="fa fa-th" aria-hidden="true"></i>
+       <div class="line-2"></div>
+        <i class="fa fa-id-badge" aria-hidden="true"></i>
+        <div class="line-3"></div>
+    </div>
+    <div class="footer">
+        <img src="./my-1.jfif" alt="img-1" class="img-1" height="200px" width="200px">
+        <img src="./my-2.jfif" alt="img-2" class="img-2" height="200px" width="200px">
+        <img src="./my-3.jfif" alt="img-3" class="img-3" height="200px" width="200px">
+        <img src="./my-4.jfif" alt="img-4" class="img-4" height="200px" width="200px">
+        <img src="./my-5.jfif" alt="img-5" class="img-5" height="200px" width="200px">
+    </div>    
+    </body>
+</html>
